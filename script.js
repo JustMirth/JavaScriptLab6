@@ -7,7 +7,7 @@ async function fetchProfile () {
         console.log("Fetching profile");
         await delay(1000);
         if (Math.random() < 0.15) {
-            throw new Error ("Failed fetching profile");
+            throw new Error ("");
         }
         return({userId: 1, name: "Mitchell C"});
     } catch (error) {
@@ -19,7 +19,7 @@ async function fetchPosts () {
         console.log("Fetching posts");
         await delay(1000);
         if (Math.random() < 0.15) {
-            throw new Error ("Failed fetching posts");
+            throw new Error ("");
         }
         return([
             {postId: 1, post: "I'm post one and I'm tons of fun!"},
@@ -34,7 +34,7 @@ async function fetchComments () {
         console.log("Fetching comments");
         await delay(1000);
         if (Math.random() < 0.15) {
-            throw new Error ("Failed fetching comments");
+            throw new Error ("");
         }
         
         return([
@@ -140,6 +140,7 @@ async function fetchUserContent() {
             comments,
         }
 
+        await delay(2000);
         console.log(userContent);
     } catch (error) {
         console.log("Error fetching user content");
